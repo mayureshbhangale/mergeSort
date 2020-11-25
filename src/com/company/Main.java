@@ -16,9 +16,9 @@ public class Main {
         int R[] = new int[n2];
 
 
-        for (int i = 0; i < n1; ++i)
+        for (int i = 0; i < n1; i++)
             L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
+        for (int j = 0; j < n2; j++)
             R[j] = arr[m + 1 + j];
 
 
@@ -70,7 +70,7 @@ public class Main {
     static void printArray(int arr[])
     {
         int n = arr.length;
-        for (int i = 0; i < n; ++i)
+        for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
         System.out.println();
     }
