@@ -74,6 +74,34 @@ public class Main {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
+    public void bubble(int arr[])
+    {
+        int i,j;
+        for(i=0;i<arr.length;i++){
+            for (j=i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+    }
+    public static void selection(int arr[]){
+        int i,j,min;
+        for(i=0;i<arr.length;i++){
+            min=i;
+            for(j=i+1;j<arr.length;j++){
+                if(arr[min]>arr[j]){
+                    min=j;
+                }
+
+            }
+            int temp=arr[i];
+            arr[i]=arr[min];
+            arr[min]=temp;
+        }
+    }
 
     public static void main(String args[])
     {
@@ -83,9 +111,10 @@ public class Main {
         printArray(arr);
 
         Main ob = new Main();
-        ob.sort(arr, 0, arr.length - 1);
+        ob.selection(arr);
 
         System.out.println("\nSorted array");
         printArray(arr);
+
     }
 }
